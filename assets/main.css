@@ -110,59 +110,49 @@ body {
     url('fonts/proxima_nova_light.woff') format('woff');
 }
 
-@media only screen and (min-width : 20em) {   /* About 320px */
+/*HEAD AND NAV*/
 
-    /*HEAD AND NAV*/
+header {
 
-    header {
+    width: 100%;
+    min-height: 9em;
+    background-color: black;
+    text-align: center;
+}
 
-        width: 100%;
-        min-height: 9em;
-        background-color: black;
-        text-align: center;
+header img {margin-top: 0.9em;}
 
-    }
+#bars {
 
-    header img {
+    position: absolute;
+    top: 0.7em;
+    left: 0.7em;
+    font-size: 1.8em;
+    color: #D1D1D1;
+    cursor: pointer;
+}
 
-        margin-top: 0.9em;
-    }
+nav {
 
-    #bars {
+    text-align: center;
+    font-family: helvetica;
+    font-weight: lighter;
+    text-transform: uppercase;
+    margin-top: 1em;
+    background-color: white;
+}
 
-        position: absolute;
-        top: 0.7em;
-        left: 0.7em;
-        font-size: 1.8em;
-        color: #D1D1D1;
-        cursor: pointer;
-    }
+nav ul {
 
-    nav {
+    margin:0;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s ease-out;
+}
 
-        text-align: center;
-        font-family: helvetica;
-        font-weight: lighter;
-        text-transform: uppercase;
-        margin-top: 1em;
-        background-color: white;
+.accordian {height: 20em;}
 
-    }
-
-    nav ul {
-
-        margin:0;
-        height: 0;
-        overflow: hidden;
-        transition: height 0.5s ease-out;
-    }
-
-    .accordian {
-
-       height: 20em;
-   }
-
-   nav ul li {
+nav ul li {
 
     width: 100%;
     height: 3.7em;
@@ -173,10 +163,7 @@ body {
     font-size: 1.3em;
 }
 
-nav ul li:first-child {
-
-    border-top:2px black solid; 
-}
+nav ul li:first-child {border-top:2px black solid;}
 
 nav ul li a {
 
@@ -185,17 +172,11 @@ nav ul li a {
     display: block;
 }
 
-nav ul ul {
-
-    display: none;
-}
+nav ul ul {display: none;}
 
 /*HEAD AND NAV ENDS HERE*/
 
-.coverimg {
-
-    display: none;
-}
+.coverimg {display: none;}
 
 /*INDEX PAGE*/
 
@@ -205,13 +186,9 @@ nav ul ul {
     text-align: center;
     padding-top: 3.5em;
     padding-bottom: 3.5em;
-    
 }
 
-.indexcontent:nth-child(even) { 
-
-    background-color: #F2F2F2;
-}
+.indexcontent:nth-child(even) { background-color: #F2F2F2;}
 
 .title {
 
@@ -221,7 +198,6 @@ nav ul ul {
     padding-bottom: 0.8em;
     text-align: center;
     font-family: 'proxima_nova_scOsflight_light';
-
 }
 
 .message {
@@ -328,8 +304,6 @@ nav ul ul {
         margin-bottom: 0.2em;
     }
 
-
-
     /*CONTACT PAGE ENDS HERE*/
 
     /*ABOUT PAGE STARTS HERE*/
@@ -349,129 +323,201 @@ nav ul ul {
         font-size: 0.9em;
     }
 
-}
+    .indexcontent img{
 
-
-
-
-@media only screen and (min-width : 45em) {   /* tablet size */
-
-    header {height: 12em;}
-
-    #bars {display: none;}
-
-    .accordian {height: auto;}
-
-    nav {background-color:black;}
-
-    nav ul {
-
-        height: auto;
-        transition: none;
-        overflow: visible;
-        margin-top: 2.3em;
+        width: 90%;
+        max-width: 31em;
     }
 
-    nav ul li {
+    .hands {
 
-        width: auto;
-        height: 1em;
-        line-height: 1.2em;
-        border-bottom: none;
-        display: inline-block;
-        margin: 0 2em 0 2em;
-        position: relative;
-        font-size: 1.2em;
-        padding-bottom: 0.1em;
-    }
-
-    nav ul li ul {
-
-        display: none;
-        position: absolute;
         width: 9em;
-        top: -100%;
-        left: -50%;
-        background-color: black;
-        border-bottom-left-radius: 0.5em;
-        border-bottom-right-radius: 0.5em;
-        list-style-type: none;
-        text-align: center;
-        line-height: 2.5em;
-        border-top: 0.7em transparent solid;
+        height: 7em;
+        background-image: url(img/hands.fw.png);
+        background-repeat: no-repeat;
+        margin: auto;
     }
 
-    nav ul li ul li {
+    .year {
 
-        width: auto;
-        margin: 0;
-        background-color: transparent;
-        font-size: 1em;
+        width: 19em;
+        height: 19em;
+        background-image: url(img/year.jpg);
+        background-repeat: no-repeat;
+        margin: auto;
     }
 
-    nav ul li a {
-
-        color: white;
-        text-decoration: none;
-        display: block;
-    }
-
-    nav ul li:hover ul {display: block;}
-
-    nav ul li:hover {border-bottom: 1px red solid;}
-
-
-    /*NAV ENDS*/
-
-    .coverimg {
-
-        width: 100%;
-        height: 27em;
-
-    display: block;
-    background-image: url(img/i.jpg);
-    background-size: cover;
-}
-
-.title {
-
-    font-size: 2.8em;
-}
-
-.message {
-
-    font-size: 1.1em;
-    line-height: 1.6em;
-}
-
-    /*CONTACT PAGE STARTS*/
-
-    .contactwrapper {width: 80%;}
-
-    
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-@media only screen and (min-width : 65em) {   /* desktop size */
-
-    body {
+    .extranav {
 
         display: none;
     }
 
+    @media only screen and (min-width : 45em) {   /* tablet size */
+
+        header {height: 12em;}
+
+        #bars {display: none;}
+
+        .accordian {height: auto;}
+
+        nav {background-color:black;}
+
+        nav ul {
+
+            height: auto;
+            transition: none;
+            overflow: visible;
+            margin-top: 2.3em;
+        }
+
+        nav ul li {
+
+            width: auto;
+            height: 1em;
+            line-height: 1.2em;
+            border-bottom: none;
+            display: inline-block;
+            margin: 0 2em 0 2em;
+            position: relative;
+            font-size: 1.2em;
+            padding-bottom: 0.1em;
+        }
+
+        nav ul li ul {
+
+            display: none;
+            position: absolute;
+            width: 9em;
+            top: -100%;
+            left: -50%;
+            background-color: black;
+            border-bottom-left-radius: 0.5em;
+            border-bottom-right-radius: 0.5em;
+            list-style-type: none;
+            text-align: center;
+            line-height: 2.5em;
+            border-top: 0.7em transparent solid;
+        }
+
+        nav ul li ul li {
+
+            width: auto;
+            margin: 0;
+            background-color: transparent;
+            font-size: 1em;
+        }
+
+        nav ul li a {
+
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+
+        nav ul li:hover ul {display: block;}
+
+        nav ul li:hover {border-bottom: 1px red solid;}
+
+
+        /*NAV ENDS*/
+
+        .coverimg {
+
+            width: 100%;
+            height: 27em;
+            display: block;
+            background-image: url(img/i.jpg);
+            background-size: cover;
+        }
+
+        .title {font-size: 2.8em;}
+
+        .message {
+
+            font-size: 1.1em;
+            line-height: 1.6em;
+        }
+
+        /*CONTACT PAGE STARTS*/
+
+        .contactwrapper {width: 80%;}
+
+
+
+
+    }
+
+
+    @media only screen and (min-width : 70em) {   /* desktop size */
+
+
+        nav ul li {
+
+            width: auto;
+            line-height: 1.2em;
+            margin: 0 2.3em 0 2.3em;
+            font-size: 1em;
+            /*outline: 1px yellow solid;*/
+
+        }
+
+        nav>ul {
+
+            width: 90%;
+            margin: auto;
+            margin-top: 2.5em;
+            /*outline: 1px red solid;*/
+        }
+
+        .coverimg {
+
+            height: 30em;
+        }
+
+        .extranav {
+
+            display:inline-block;
+        }
+
+        .indexcontent img{
+
+            width: auto;
+            max-width: 100%;
+        }
+
+
+
 }
+
+
+    @media only screen and (min-width : 90em) {
+
+        nav ul li {
+
+            width: auto;
+            line-height: 1.2em;
+            margin: 0 3.2em 0 3.2em;
+            font-size: 1em;
+            /*outline: 1px yellow solid;*/
+
+        }
+
+        nav>ul {
+
+            width: 85%;
+            margin: auto;
+            margin-top: 2.5em;
+            /*outline: 1px red solid;*/
+        }
+
+        .coverimg {
+
+            height: 35em;
+        }
+
+
+
+    }
 
 
 
